@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../../../src/logo.png'
 import { FaShoppingCart } from 'react-icons/fa';
+import { Link, NavLink } from 'react-router-dom';
 
 
 
@@ -10,25 +11,32 @@ const NavBar = () => {
       
     <nav className="navbar navbar-expand-lg navbar-light bg-white">
         <div className="container-fluid">
-            <a className="navbar-brand" href="#">
-                <img src={logo} alt="" width="250" height="75"/>
-            </a>
+{/*             <a className="navbar-brand" href="#"> */}
+                <Link to="/">
+
+                    <img src={logo} alt="" width="250" height="75"/>
+                </Link>
+{/*             </a> */}
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <a className="nav-link" href="#">FACIAL</a>
+                        {/* <a className="nav-link" href="#">FACIAL</a> */}
+                        <NavLink className="nav-link" to="/facial">FACIAL</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">CAPILAR</a>
+                        {/* <a className="nav-link" href="#">CAPILAR</a> */}
+                        <NavLink className="nav-link" to="/facial">CAPILAR</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">CORPORAL</a>
+                        {/* <a className="nav-link" href="#">CORPORAL</a> */}
+                        <NavLink className="nav-link" to="/facial">CORPORAL</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">MAQUILLAJE</a>
+                        {/* <a className="nav-link" href="#">MAQUILLAJE</a> */}
+                        <NavLink className="nav-link" to="/facial">MAQUILLAJE</NavLink>
                     </li>
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
